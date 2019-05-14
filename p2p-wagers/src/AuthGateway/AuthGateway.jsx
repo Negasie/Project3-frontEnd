@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import RegistrationForm from './RegistrationForm/RegistrationForm';
-import LoginForm from './LoginForm/LoginForm';
+import Login from './LoginForm/LoginForm';
 export default class AuthGateway extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,7 @@ export default class AuthGateway extends React.Component {
               className={this.state.activeTab === '1' ? "active" : null }
               onClick={() => { this.toggle('1'); }}
             >
-              Login
+              
             </NavLink>
           </NavItem>
           <NavItem>
@@ -38,13 +38,13 @@ export default class AuthGateway extends React.Component {
               className={this.state.activeTab === '2' ? "active" : null}
               onClick={() => { this.toggle('2'); }}
             >
-              Register
+              
             </NavLink>
           </NavItem>
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-              <LoginForm handleLogin={this.props.handleLogin}></LoginForm>
+              <Login handleLogin={this.props.handleLogin}></Login>
           </TabPane>
           <TabPane tabId="2">
             <RegistrationForm handleRegister={this.props.handleRegister}></RegistrationForm>

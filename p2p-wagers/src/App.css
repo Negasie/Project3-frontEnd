@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -17,7 +16,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+#sports-index{
 
+}
 .App-link {
   color: #61dafb;
 }

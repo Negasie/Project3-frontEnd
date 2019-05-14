@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../SearchBar';
 import EventsContainer from '../EventsContainer';
+import BetContainer from '../BetContainer';
 
 
 class MainContainer extends Component{
@@ -32,8 +33,13 @@ class MainContainer extends Component{
     render(){
         console.log(this.state);
         return(
-            <div>
+            <div className="App-header" id="sports-index">
+            <br></br>
+                         <BetContainer />
+                         <br></br><br></br><br></br>
+
               Search for a Game Here:    <SearchBar getEvents={this.getEvents}/>
+             
               <EventsContainer eventList={this.state.events}/>
             </div>
         )
