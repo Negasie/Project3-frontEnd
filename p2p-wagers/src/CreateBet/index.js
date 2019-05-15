@@ -25,7 +25,7 @@ class CreateBet extends Component {
           <input type="text" name="game" onChange={this.updateBet}/>
         </label>
         <label>
-          Props:
+          Action:
           <input type="text" name="action" onChange={this.updateBet}/>
         </label>
          <label>

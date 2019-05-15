@@ -7,14 +7,16 @@ const Bets = (props) => {
   const BetList = props.bets.map((bet) => {
     return (
       <li key={bet._id}>
-        <span>{bet.game}</span><br/>
-        <span>{bet.action}</span><br/>
-        <span>{bet.odds}</span><br/>
+        <span>For This Game: {bet.game}</span> <br></br>
+        <span>I'll bet that {bet.action}</span><br></br>
+        <span>For {bet.odds} odds.</span><br></br>
         <button onClick={props.deleteBet.bind(null, bet._id)}>Delete</button>
+        <button onClick={props.showModal.bind(null, bet)}>Edit</button>
       </li>
 
       )
   })
+console.log(BetList);
 
   return (
     <ul>
