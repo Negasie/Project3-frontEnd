@@ -35,12 +35,13 @@ class MainContainer extends Component{
         return(
             <div className="App-header" id="sports-index">
             <br></br>
-                         <BetContainer />
-                         <br></br><br></br><br></br>
-
               Search for a Game Here:    <SearchBar getEvents={this.getEvents}/>
              
               <EventsContainer eventList={this.state.events}/>
+                         <br></br>
+                         <BetContainer eventList={this.state.events} />
+
+
             </div>
         )
     }

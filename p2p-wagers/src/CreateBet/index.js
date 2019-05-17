@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import EventsContainer from '../EventsContainer';
+import Dropdown from '../Dropdown';
 class CreateBet extends Component {
 
   constructor(){
@@ -13,6 +14,8 @@ class CreateBet extends Component {
   }
   updateBet = (e) => {
     // Computed Properties
+    console.log(e.currentTarget.value);
+    console.log(this.state, "##############");
     this.setState({[e.currentTarget.name]: e.currentTarget.value})
   }
   render(){
@@ -22,16 +25,16 @@ class CreateBet extends Component {
       <form onSubmit={this.props.addBet.bind(null, this.state)}>
         <label>
           Game:
-          <input type="text" name="game" onChange={this.updateBet}/>
-        </label>
+          <Dropdown  name="game" updateBet={this.updateBet}/>
+        </label><br></br>
         <label>
           Action:
           <input type="text" name="action" onChange={this.updateBet}/>
-        </label>
+        </label><br></br>
          <label>
           Odds:
           <input type="text" name="odds" onChange={this.updateBet}/>
-        </label>
+        </label><br></br>
         <input type='Submit'/>
       </form>
       )
