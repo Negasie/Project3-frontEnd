@@ -20,8 +20,10 @@ Other users can view all possible wagers that have been posted, and they have th
 
 #		STRETCH GOALS
 
-Add a "Shit talking room" or forum for Users to discuss games, bets, players, etc. 
+Add a "Shit talking room" or forum for Users to discuss games, bets, players, etc.
+
 Add a "Statistics Show Page" for Teams/Players.
+
 Add a "Statistics Show Page" for Users as well?  Showing their win/loss % from their bets.
 
 
@@ -39,4 +41,10 @@ Add a "Statistics Show Page" for Users as well?  Showing their win/loss % from t
 
 # 	SUDO
 
-1. 
+1.  
+
+
+
+
+
+

@@ -4,9 +4,11 @@ const EventsContainer = (props)=>{
 
     const eventList = props.eventList.map((event)=>{
         return (
-      <li key={event._id}>
-        <span>{event.dateEvent}</span><br/>
-        <span>{event.strEvent}</span><br/>
+      <li key={event.idEvent}>
+              <span>{event.dateEvent}</span>
+          <a href={`/${event.idEvent}`} >{event.strEvent} </a>
+
+
       </li>
         )
     })

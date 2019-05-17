@@ -1,37 +1,39 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class LoginForm extends Component {
-    constructor(){
-        super()
-        this.state = {
-            username: '',
-            password: ''
-        }
-    }
+class Login extends Component {
+  constructor(){
+    super();
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        })
+    this.state = {
+      username: '',
+      password: '',
     }
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.handleLogin(this.state);
-    }
+    this.props.handleLogin(this.state);
 
-    render(){
-        return(
-            <form onSubmit={this.handleSubmit}>
-                  Username: <input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
-                  <br></br>
-                  Password: <input onChange={this.handleChange} value={this.state.password}type="password" name="password"/>
-                  <input type="submit"/>
-            </form>
-        )
-    }
+  }
+  handleChange = (e) => {
+    this.setState({[e.currentTarget.name]: e.currentTarget.value});
+  }
+  render(){
+    return (
+
+      <form onSubmit={this.handleSubmit}>
+           <h2>Login</h2>
+        Username: <input type='text' name="username" placeholder="username" value={this.state.username} onChange={this.handleChange} />
+                    <br></br>
+        Password: <input type='password' name="password" placeholder="password" value={this.state.password} onChange={this.handleChange} />
+                    <br></br>
+
+        <input type='submit' value="Submit" />
+
+      </form>
+      )
+  }
 }
 
 
-
-export default LoginForm;
+export default Login;
